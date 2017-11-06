@@ -1,8 +1,33 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+import random
+
+def losuj(ileliczb, maksliczb):
+        ile = 0 # ilośc unikalnych liczb
+    #for i in range(ileliczb):
+    while ile < ileliczb:
+        liczba = random.randint(0, maksliczb)
+        if liczby.count(liczba) == 0:
+            liczby.append(liczba)
+            ile += 1
+    print(liczby)
+    return liczby
 
 def main(args):
+    ileliczb = int(input('Ile liczb chcesz zobaczyć?'))
+    maksliczb = int(input('Maksymalna losowana liczba :'))
+
+    liczby = losuj(ileliczb, maksliczb)
+
+    #pobieranie typów uzytkownika
+    typy = set() #pusty zbiór
+    for i in random(ileliczb):
+        typ = input('Podaj typ: ')
+        typy.add(typ)
+
+    print(typy)
+
     return 0
 
 
