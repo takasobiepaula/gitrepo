@@ -4,10 +4,14 @@
 
 
 #include <iostream>
+#include <math.h>
 using namespace std;
 int main(int argc, char **argv)
 {
-	int a, b, c , obwod;
+	int a;
+    int b;
+    int c;
+    int obwod;
 	a = b = c = obwod = 0;
 	float p = 0;
 	cout << "Podaj boki: " << endl;
