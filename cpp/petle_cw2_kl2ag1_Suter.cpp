@@ -2,7 +2,6 @@
  * petle_cw2_kl2ag1_Suter.cpp
  */
 
-
 #include <iostream>
 #include <math.h>
 using namespace std;
