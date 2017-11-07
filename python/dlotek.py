@@ -4,8 +4,11 @@
 import random
 
 def losuj(ileliczb, maksliczb):
-        ile = 0 # ilośc unikalnych liczb
-    #for i in range(ileliczb):
+    liczby = []  # pusta lista
+
+        ile = 0  # ilośc unikalnych liczb
+    # for i in range(ileliczb):
+
     while ile < ileliczb:
         liczba = random.randint(0, maksliczb)
         if liczby.count(liczba) == 0:
@@ -20,11 +23,15 @@ def main(args):
 
     liczby = losuj(ileliczb, maksliczb)
 
-    #pobieranie typów uzytkownika
-    typy = set() #pusty zbiór
-    for i in random(ileliczb):
+    # pobieranie typów uzytkownika
+    typy = set()  # pusty zbiór
+    # for i in random(ileliczb):
+    ile = 0
+    while ile < ileliczb:
         typ = input('Podaj typ: ')
-        typy.add(typ)
+        if typ not in typy:
+            typy.add(typ)
+            ile += 1
 
     print(typy)
 
