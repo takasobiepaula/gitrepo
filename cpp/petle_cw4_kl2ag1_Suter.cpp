@@ -2,7 +2,6 @@
  * petle_cw4_kl2ag1_Suter.cpp
  */
 
-
 #include <iostream>
 using namespace std;
 int main(int argc, char **argv)
@@ -21,4 +20,3 @@ int main(int argc, char **argv)
 	
 	return 0;
 }
-
