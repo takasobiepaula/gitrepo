@@ -13,7 +13,7 @@ int fib(int n)
         return 1;
         
     if(n>2)
-        return fib(n-2)+fib(n-1)
+        return (n*n)
 }
 
 int main()

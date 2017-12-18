@@ -20,6 +20,14 @@ float horner_it(int k, float tbwsp[], float x){
         return wynik;    
 }
 
+int horner(int wsp[],int st, int x)
+{
+  if(st==0)
+    return wsp[0];
+ 
+  return x*horner(wsp,st-1,x)+wsp[st];
+}
+
 int main(int argc, char **argv)
 {
 	int stopien = 3;
