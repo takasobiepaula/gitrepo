@@ -7,50 +7,57 @@
 
 using namespace std;
 
-void wypelnij(int t[], int n, int maks) {
-        srand(time(NULL)); //inicjacja generatora liczb pseudolosowych
-        for (int i = 0; i < n; i++) {
-            t[i] = 1 + rand() % maks; //losowanie liczb cakowitych <0; maks>
-    }
-}
+int main(int argc, char **argv)
 
-void drukuj(int t[], int n) {
-      for (int i = 0; i < n; i++) {
-          cout << t[i] << " " ;
-    }
-    cout << endl;
-}
-
-void zamien(int &a, int &b) {
-    int tmp = a;
-    a = b;
-    b = tmp;
-}
-
-void sort_wyb(int t[], int n){
-    //selection sort
-    cout << " ---------- Sortowanie przez wybieranie ---------- "<< endl;
-    int i, j, k;
-    for (i = 0; i < n; i++) {
-        k = i;
-        for( j = i + 1; j < n; j++) {
-            if (t[j] < t[k]) 
-            k = j;
+void sort_wstaw(int t[], int n)
+{
+    int el=0;
+    int k=0;
+    
+    for(int i=1;i<n;i++)
+    {
+        el = t[i];
+        k = i-1;
+        
+        while(k>=0 && t[k] > el)
+        {
+            t[k+1] = t[k];
+            k--;
         }
-        zamien(t[i], t[k]);
+        t[k+1] = el;
     }
 }
-
-
+void drukuj(int tab[], int n)
+{
+    for(int i=0; i<n; i++)
+    {
+        cout<<tab[i]<<" ";
+    }
+}
 
 int main(int argc, char **argv)
 {
-	const int ile = 10;
-    int tab[ile];
-    wypelnij(tab, ile, 20);
-    drukuj(tab, ile);
-    sort_wyb(tab, ile);
-    drukuj(tab, ile);
+    int ile = 10;
+    int lista[ile];
+    
+    lista[0]= 2; 
+    lista[1]= 5; 
+    lista[2]= 8; 
+    lista[3]= 9; 
+    lista[4]= 0; 
+    lista[5]= 3; 
+    lista[6]= 6; 
+    
+    //int lista [5] =  {3, 4, 5, 6, 7}
+    
+    cout<<"Przed sortowaniem: "<<endl;
+    drukuj(lista, ile);
+
+    cout<<endl;
+    cout<<"Po sortowaniu: "<<endl;
+    
+    sort_wstaw(lista, ile);
+    drukuj(lista, ile);
+    
     return 0;
 }
-
