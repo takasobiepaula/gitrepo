@@ -1,0 +1,8 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-01-16T10:06:05+01:00
+
+====== Algorytmy ======
+Created wtorek 16 styczeń 2018
+
+Funckja musi zapamietac adres spod ktorego sie wywoluje i stan swoich aktualnych zmiennych. Podwumowując algorytzmy rekurencyjne sa bardziej zlozone niz alg. Złożoność czasowa nie bierze pod uwage fizycznego wykonania algorytmu. Jako kryterium oceny złożonosci przyjmuje sie liczbe wykonywanych porównań.  Nie pytamy ile dokładnie operacji wykona algorytm, chodzi o rząd wielkosci. Czy ilość operacji jest wyrazana przez funckje linowa/kwadratowa...?  
